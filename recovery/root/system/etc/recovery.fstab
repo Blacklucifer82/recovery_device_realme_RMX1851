@@ -24,4 +24,5 @@
 /dev/block/bootdevice/by-name/persist    /persist             ext4          nosuid,noatime,nodev,barrier=1                                                                       wait
 /dev/block/bootdevice/by-name/userdata   /data                ext4          noatime,nosuid,noatime,nodev,barrier=1,noauto_da_alloc,discard,lazytime                              wait,check,resize,fileencryption=ice,quota
 /dev/block/bootdevice/by-name/userdata   /data                f2fs          noatime,nosuid,nodev,discard,fsync_mode=nobarrier,inlinecrypt                                        latemount,wait,check,fileencryption=ice,quota,formattable,reservedsize=128M
+/dev/block/by-name/logdump               /metadata            ext4          noatime,nosuid,nodev,discard,data=journal,commit=1                                               wait,check,formattable,first_stage_mount,metadata_csum
 /dev/block/bootdevice/by-name/misc       /misc                emmc          defaults                                                                                             defaults

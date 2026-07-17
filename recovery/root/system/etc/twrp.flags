@@ -15,6 +15,7 @@
 
 /system_image       emmc    /dev/block/bootdevice/by-name/system          flags=display="System Image";backup=1;flashimg=1
 /vendor_image       emmc    /dev/block/bootdevice/by-name/vendor          flags=display="Vendor Image";backup=1;flashimg=1
+/metadata           ext4    /dev/block/bootdevice/by-name/logdump         flags=display="Metadata";fsflags="discard"
 /odm_image          emmc    /dev/block/bootdevice/by-name/odm             flags=display="Odm Image";backup=1;flashimg=1
 
 # Vbmeta or splash partitions

@@ -76,7 +76,7 @@ else ifeq ($(LAZY_TARGET_RECOVERY_TYPE), ofrp)
     # Maintainer's name
     OF_MAINTAINER := LazymeaoProjects
     # Version of OrangeFox
-    FOX_VERSION := v0.1.2
+    FOX_MAINTAINER_PATCH_VERSION := 1
     # Variant based on Legacy Support
     FOX_VARIANT := $(if $(filter true,$(LAZY_SUPPORT_LEGACY_BUILD)),A9-To-A11,A12.1-To-A15)
     # Build type is stable

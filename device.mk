@@ -33,7 +33,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.gatekeeper.disable_spu=true \
-	ro.crypto.dm_default_key.options_format.version=2
+	ro.crypto.dm_default_key.options_format.version=2 \
+	ro.bpf.kver_override=5.15.178
 
 # oem otacerts
 PRODUCT_EXTRA_RECOVERY_KEYS += \

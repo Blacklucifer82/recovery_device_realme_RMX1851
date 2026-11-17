@@ -30,7 +30,7 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 # Configure
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \

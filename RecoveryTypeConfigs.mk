@@ -46,7 +46,7 @@ ifeq ($(LAZY_TARGET_RECOVERY_TYPE), twrp)
     ## TWRP Configuration
     ## TWRP-specific flags here
     # Add TW_DEVICE_VERSION
-    TW_DEVICE_VERSION := v0.1.2 | LazymeaoProjects
+    TW_DEVICE_VERSION := v0.1.2 | Sourabh
     # Statusbar icons flags
     TW_STATUS_ICONS_ALIGN := center
     TW_CUSTOM_CPU_POS := 40
@@ -73,8 +73,13 @@ else ifeq ($(LAZY_TARGET_RECOVERY_TYPE), ofrp)
     FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER := 1
     # Target architecture is arm64
     TARGET_ARCH := arm64
+    RECOVERY_LIBRARY_SOURCE_FILES += $(TARGET_OUT_SHARED_LIBRARIES)/libsysutils.so
+    FOX_RECOVERY_INSTALL_PARTITION := /dev/block/bootdevice/by-name/recovery
+    FOX_RECOVERY_BOOT_PARTITION := /dev/block/bootdevice/by-name/boot
+    FOX_RECOVERY_SYSTEM_PARTITION := /dev/block/bootdevice/by-name/system
+    FOX_RECOVERY_VENDOR_PARTITION := /dev/block/bootdevice/by-name/vendor
     # Maintainer's name
-    OF_MAINTAINER := LazymeaoProjects
+    OF_MAINTAINER := Sourabh
     # Version of OrangeFox
     FOX_MAINTAINER_PATCH_VERSION := 1
     # Variant based on Legacy Support
@@ -173,7 +178,7 @@ else ifeq ($(LAZY_TARGET_RECOVERY_TYPE), shrp)
     # Path of your SHRP device tree
     SHRP_PATH := $(DEVICE_PATH)
     # Maintainer name
-    SHRP_MAINTAINER := LazymeaoProjects
+    SHRP_MAINTAINER := Sourabh
     # Recovery Type (for "About" section only)
     SHRP_REC_TYPE := SAR
     # Recovery path

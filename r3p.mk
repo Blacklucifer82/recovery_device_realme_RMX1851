@@ -73,7 +73,7 @@ TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_VENDOR := vendor
 
 # System as root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+# BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Decryption support for /data
 TW_INCLUDE_CRYPTO := true
@@ -108,3 +108,5 @@ TW_OZIP_DECRYPT_KEY := 1c4c1ea3a12531ae491b21bb31613c11
 
 # Logical partitions
 TW_INCLUDE_LOGICAL := my_carrier my_company my_custom my_engineering my_heytap my_manifest my_preload my_product my_region my_stock my_version
+
+PRODUCT_PROPERTY_OVERRIDES += ro.product.first_api_level=28
